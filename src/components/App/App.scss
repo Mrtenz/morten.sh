@@ -1,0 +1,101 @@
+html, body, #root, .app {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: #212121;
+  font-size: 14px;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #dedede;
+}
+
+.logo {
+  display: block;
+}
+
+.social {
+  margin-top: 100px;
+  opacity: 0;
+  animation: fade-in 4s linear forwards;
+  animation-delay: 2s;
+
+  & a {
+    margin: 0 25px;
+    color: #dedede;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+}
+
+.triangle {
+  animation: fill-letter 4s linear forwards;
+  stroke-dasharray: 34.14213562011719;
+  stroke-dashoffset: 34.14213562011719px;
+}
+
+.letter {
+  animation: fill-letter 4s linear forwards;
+  stroke-dasharray: 157.2792205810547;
+  stroke-dashoffset: 157.2792205810547px;
+}
+
+#letter {
+  animation: fill-letter 4s linear forwards;
+  stroke-dasharray: 314.5584411621094;
+  stroke-dashoffset: 314.5584411621094px;
+}
+
+#shadow {
+  animation: fill-shadow 4s linear forwards;
+  animation-delay: 2s;
+}
+
+@keyframes fill-letter {
+  0% {
+    fill: #212121;
+  }
+
+  50% {
+    fill: #212121;
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    fill: #fff;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-shadow {
+  0% {
+    fill: #212121;
+  }
+
+  50% {
+    fill: #fff;
+  }
+
+  100% {
+    fill: #dedede;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
